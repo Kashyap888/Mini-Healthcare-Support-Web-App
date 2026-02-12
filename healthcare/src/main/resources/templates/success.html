@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Submission Successful</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body>
+
+<div class="container">
+    <h2>Request Submitted Successfully ✅</h2>
+
+    <p><b>Name:</b> <span th:text="${request.name}"></span></p>
+    <p><b>Support Type:</b> <span th:text="${request.type}"></span></p>
+    <p><b>Contact:</b> <span th:text="${request.contact}"></span></p>
+
+    <a href="/">Submit another request</a>
+</div>
+
+</body>
+</html>

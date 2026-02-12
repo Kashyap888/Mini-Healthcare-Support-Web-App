@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Healthcare Support</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body>
+<div class="container">
+
+<h1>Mini Healthcare Support App</h1>
+<p>Submit your support request below</p>
+
+<form action="/submit" method="post">
+    <input type="text" name="name" placeholder="Name" required>
+
+    <input type="number" name="age" placeholder="Age">
+
+    <input 
+      type="text"
+      name="contact"
+      placeholder="10-digit mobile number"
+      pattern="[0-9]{10}"
+      title="Please enter a valid 10-digit mobile number"
+      required
+    >
+
+    <select name="type">
+        <option>Medicine</option>
+        <option>Appointment</option>
+        <option>Financial</option>
+        <option>Other</option>
+    </select>
+
+    <textarea name="description" placeholder="Describe your issue"></textarea>
+
+    <button type="submit">Submit</button>
+</form>
+
+<a href="/chatbot">Need help? Talk to our FAQ Chatbot 🤖</a>
+
+</div>
+</body>
+
+</html>
